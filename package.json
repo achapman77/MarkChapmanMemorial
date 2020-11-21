@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/achapman77/MarkChapmanMemorial#readme",
   "dependencies": {
-    "@11ty/eleventy": "^0.11.1"
+    "@11ty/eleventy": "^0.11.1",
+    "nunjucks": "^3.2.2"
   }
 }
