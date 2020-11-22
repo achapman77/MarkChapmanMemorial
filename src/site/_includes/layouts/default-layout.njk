@@ -3,15 +3,41 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>{{site.title}}</title>
-      
+
         <link rel="stylesheet" href="/assets/css/main.css" type="text/css">
     </head>
     <body>
-        {% include "../template-parts/_header.njk" %}
+        {# {% include "../template-parts/_header.njk" %} #}
+        <div class="appcon">
+            <div class="apphead">
+                <div class="appname">
+                    {# <div class="sub-header">In Celebration Of</div> #}
+                    <div class="header">Mark A. Chapman</div>
+                    <div class="card-content">
+                    
+                    </div>
+                </div>
+            </div>
+            <div class="appconts">
+                <h4>Details of Life</h4>
+                <div class="appdg">
+                    <div class="adgset">
+                        <top>full name</top>
+                        <bot>Mark A. Chapman</bot>
+                    </div>
+                    <div class="adgset">
+                        <top>date of birth</top>
+                        <bot>8 August 1997 (23)</bot>
+                    </div>
+                    <div class="adgset">
+                        <top>pronouns</top>
+                        <bot>He/Him</bot>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <h1>{{site.title}}</h1>
-
-        {% include "../template-parts/_footer.njk" %}
+        {# {% include "../template-parts/_footer.njk" %} #}
         {{content | safe}}
     </body>
 </html>
