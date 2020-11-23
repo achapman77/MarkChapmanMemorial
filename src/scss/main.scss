@@ -1,179 +1,163 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Varta:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&display=swap');
 
-@font-face {
-  font-family: Brooke;
-  src: url(https://files.jcink.net/uploads2/lsskintesting/assets/Brooke_4Bgvp.ttf);
-}
 
 @import "components/header";
 @import "components/footer";
 
 html,
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-$blue-0: #00264c
+h1,
+h2,
+h4,
+h4,
+h5 {
+  font-family: 'Lora', serif;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+
+p, a {
+  font-family: 'Montserrat', sans-seri;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+$blue-0: rgb(204, 243, 251);
+$blue-1: rgb(86, 186, 243);
+$blue-2: rgb(22, 117, 202);
+$blue-3: rgb(26, 65, 111);
+
+$gray-3: rgb(56, 62, 79);
+
+$orange-1: rgb(231, 174, 102);
 
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 7px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    // box-shadow: inset 0 0 5px grey;
-    // border-radius: 10px;
+  // box-shadow: inset 0 0 5px grey;
+  // border-radius: 10px;
+  background-color: $blue-1;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #000000;
-    border-radius: 10px;
+  background: $blue-3;
+  // border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #000000;
+  background: $blue-3;
 }
 
-
-
-body { 
-  margin: 0px; padding: 0px; 
-  background-color: #efefef;
-  --blue: rgba(104, 126, 156,1);
-  --blue80: rgba(104, 126, 156, .8);
-  --blue60: rgba(104, 126, 156, .6);
-  --blue20: rgba(104, 126, 156, .2);
-  --bigfont: 'Brooke';
-  --regfont: 'Varta';
-  --bodyfont: 400 12px/20px var(--regfont);
-  --capsfont: 700 10px/10px var(--regfont);
-  --regfont: 'Varta';
-  color: #888;
-}
-
-.appcon {
+.page-container {
   width: 100vw;
   height: 100vh;
-//   margin: 50px auto 0px auto;
-  perspective: 4px;
   overflow-x: hidden;
   overflow-y: scroll;
-//   border: 25px solid var(--blue);
 }
 
-.appcon .apphead {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-}
-
-.appcon .apphead::before {
-  content: '';
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: -7px;
+.lander-image {
   background: url('../images/starry_night_3.jpg') center center;
   background-size: cover;
   background-position: bottom;
-  z-index: 0;
-  transform: translateZ(-4px) scale(2);
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-.appcon .apphead .appname {
+
+.hero-card {
   position: absolute;
   z-index: 1;
   transform: translateZ(-2px) scale(1.5);
-  bottom: -45px;
-  left: -45px;
-  height: 800px;
-  width: 600px;
-  padding: 25px 25px;
-  background-color: var(--blue80);
-//   font: 40px/40px var(--bigfont);
+  bottom: 205px;
+  left: 419px;
+  height: 560px;
+  width: 445px;
+  // padding: 25px 25px;
+  background-color: rgba($blue-3, 0.5);
+  
   text-align: center;
-//   letter-spacing: 5px;
-  color: #000;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  border-radius: 5px;
+  backdrop-filter: blur(2px);
+
   .header {
-    font: 50px/50px var(--bigfont);
+    background: rgba(0, 0, 0, 0.5);
+    color: $blue-0;
+    width: 100%;
+    height: fit-content;
+    border-bottom: 1px solid $blue-0;
+    border-radius: 5px 5px 0 0;
+    color: $orange-1;
+
+    .sub-title {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .title {
+      margin-bottom: 10px;
+      letter-spacing: 5px;
+      font-size: 25px;
+      
+    }
+  }
+
+  .content {
     letter-spacing: 5px;
+    color: $blue-0;
+    font-size: 12px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    // padding: 10px;
+    margin: 15px 0;
   }
 }
 
-.appconts {
-  position: relative;
-  z-index: 2;
-  width: calc(100% - 100px);
-  margin: 0px auto;
-  padding: 50px;
-  background-color: #f3f3f0;
-  font: var(--bodyfont);
-  text-align: justify;
-  letter-spacing: 1px;
-}
-
-.appconts .appdg {
-  width: 100%;
-  height: 200px;
-  padding: 0px 0px 50px 0px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-}
-
-.appconts .appdg .adgset {
-  width: 30%;
-  text-align: left;
-  display: flex;
-  flex-flow: column nowrap;
-}
-
-.appconts .appdg .adgset top {
-  padding: 5px 5px 0px 5px;
-  background-color: var(--blue60);
-  border-bottom: 2px solid var(--blue);
-  font: var(--capsfont);
-  text-transform: uppercase;
-  letter-spacing: 1.4px;
-  color: #fff;
-}
-
-.appconts .appdg .adgset bot {
-  padding: 8px 5px 5px 5px;
-  font: var(--capsfont);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-h4 {
-  display: inline-block;
-  width: initial;
-  padding: 0px 5px 5px 5px;
-  font: bold 20px/20px var(--bigfont);
-  letter-spacing: 2px;
-  border-bottom: 3px solid var(--blue);
-}
-
-.appconts hl {
-  font: var(--capsfont);
-  text-transform: uppercase;
-  color: #444;
-  padding: 4px 4px 0px 4px;
-  background-color: var(--blue20);
-}
-
-.appconts a {
-  font: var(--capsfont);
-  text-transform: uppercase;
-  color: var(--blue);
-  text-decoration: none;
+#fb_connect {
+  width: -webkit-fill-available;
+  height: fit-content;
+  background: $blue-3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+    a {
+      border: 1px solid $orange-1;;
+      border-radius: 5px;
+      padding: 30px 60px;
+      margin: 50px auto;
+      font-size: 23px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $orange-1;
+      // background: linear-gradient(90deg, rgba(26,65,111,1) 50%, rgba(231,174,102,1) 100%);
+      span {text-align: center; margin-right: 20px;}
+      i {
+        // margin-left: 15px;
+        font-size: 30px;
+      }
+    }
 }

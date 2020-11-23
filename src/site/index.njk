@@ -1,0 +1,61 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>{{site.title}}</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+        <link rel="stylesheet" href="/assets/css/main.css" type="text/css">
+    </head>
+    <body>
+        {# {% include "../template-parts/_header.njk" %} #}
+        {# https://codepen.io/summercodes/pen/oNLmZag #}
+        <div class="page-container">
+            <div class="lander-image">
+
+                <div class="hero-card">
+                    <div class="header">
+                        <div class="sub-title">
+                            <p>In Memorium</p>
+                        </div>
+                        <div class="title">
+                            <h2>Mark A. Chapman</h2>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <h1>Perhaps<br> 
+                        they are not the stars,<br>
+                        but rather openings<br>
+                        in Heaven<br>
+                        where the love<br>
+                        of our lost ones<br>
+                        shines down<br>
+                        to let us know<br>
+                        they are with us.</h1>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <section id="fb_connect">
+            <a href="$"><span>VISIT MARK'S<br>  MEMORIAL FACEBOOK PAGE</span>  <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i></a>
+            
+            <div class="container">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="title">Celebrating Mark</div>
+                        <div class="content">
+                        <p>We invite you to leave messages, share poems</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        {# {% include "../template-parts/_footer.njk" %} #}
+        {{content | safe}}
+    </body>
+</html>
